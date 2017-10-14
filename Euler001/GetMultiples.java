@@ -9,7 +9,7 @@
  * 
  * 	METHODS
  * 	----------
- * 	///getMultiplesSum(int base, int limit, int except);
+ * 	///integer getMultiplesSum(int base, int limit, int except);
  * 
  * 	Description: We get the sum of the multiples of base that are not multiples of except and are smaller than limit
  * 	Input: 2 or 3 integers
@@ -26,10 +26,10 @@
  * 	END
  * 
  * 
- * 	///getMultiplesSumOf
+ * 	///integer getMultiplesSumOf(int[] numbers, int limit)
  * 
  * 	Description: We get the sum of the multiples of the numbers in the input arrar
- * 	Input: 1 Integers array
+ * 	Input: 1 Integers array and 1 int
  * 	Output 1 Integer
  * 
  * 	START
@@ -96,7 +96,6 @@ public class GetMultiples {
 	
 	/*numbers: array of numbers to get multiples of
 	  limit: number in which we will stop counting multiples*/
-	
 	public long getMultiplesSumOf(int[] numbers, int limit){
 		
 		multiplesSum=0;
