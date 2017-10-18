@@ -51,9 +51,10 @@ public class Fibonacci{
 	/* limit: the number to stop counting
 	 * divisibleBy: the number it whould be divisible by to be added to totalSum, if null, it will be 1*/
 	public long sum(int limit, int divisibleBy){
-		while(newFibonacci<limit && divisibleBy>0){
-			if(newFibonacci%divisibleBy==0) totalSum+=newFibonacci;
-			newFibonacci = sum1+sum2;
+		while(newFibonacci<limit && divisibleBy>0){  				 //stop when we reach limit or if data is not valid
+			if(newFibonacci%divisibleBy==0) totalSum+=newFibonacci;  //If its divisible add to totalSum
+			//Get new fibonacci number and put the new valaues in sum1 and sum2
+			newFibonacci = sum1+sum2; 
 			sum1 = sum2;
 			sum2 = newFibonacci;
 		}
@@ -62,7 +63,7 @@ public class Fibonacci{
 	}
 	
 	public long sum(int limit){
-		return sum(limit,1);
+		return sum(limit,1);   //If no second parameter, use 1
 	}
 	
 }
