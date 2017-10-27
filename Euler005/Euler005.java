@@ -57,9 +57,9 @@ public class Euler005 {
 			 * Postcondition             :    It's divisible by numbers from 1 to 20*/
 			 
 			//Check if next (add 20 to counter) is valid
-			for(int i = 2; i <= MAX_NUMBER; i++){
-				if(number%i != 0) break;
-				else validCount++;              //If it's divisible by loop counter, add one to valid counter
+			for(int i = 2; i <= MAX_NUMBER && number%i == 0; i++){
+				//if(number%i != 0) break;
+				validCount++;              //If it's divisible by loop counter, add one to valid counter
 				if(validCount == MAX_NUMBER-1){   //If it's 19 (20-1, as we don't check 1) 
 					valid = true;                 //Update loop switch
 					answer = number;              //This number will be our answer
